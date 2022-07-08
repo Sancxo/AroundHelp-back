@@ -27,6 +27,15 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Auth
+gem 'devise', '~> 4.8', '>= 4.8.1'
+
+# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
+gem "image_processing", "~> 1.2"
+gem 'ruby-vips', '~> 2.1', '>= 2.1.4'
+# Active Storage validations [https://github.com/igorkasyanchuk/active_storage_validations]
+gem 'active_storage_validations'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
