@@ -1,11 +1,8 @@
 class AlterUsersInfos < ActiveRecord::Migration[7.0]
   def change
-    add_column :users do |t|
-      t.string :first_name, null: false, default: "Anonym"
-      t.string :last_name
-      t.date :birthdate
-      t.text :about
-      t.attachment :id_card
-    end
+      add_column :users, :first_name, :string, null: false, default: "Anonym"
+      add_column :users, :last_name, :string
+      add_column :users, :birthdate, :date
+      add_column :users, :about, :text
   end
 end

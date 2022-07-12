@@ -11,6 +11,8 @@ gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
+# To use ActiveStorage with Postgres
+# gem 'active_storage-postgresql', '~> 0.3.0'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
