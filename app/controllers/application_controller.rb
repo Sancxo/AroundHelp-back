@@ -15,5 +15,7 @@ class ApplicationController < ActionController::Base
     end
 
     #Login Path (if already logged in)
-\
+    # def after_sign_in_path_for(resource)
+    #     user_profile_path(current_user.id)
+    # end
 end
