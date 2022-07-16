@@ -1,0 +1,11 @@
+<div>
+    <div>
+        <% if @user.id_card.attached? %>
+            <%= image_tag @user.id_card %>
+        <% end%>
+    </div>
+
+    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+    <p><%= @user.birthdate.nil? %></p>
+    <p><%= @user.about %></p>
+</div>
