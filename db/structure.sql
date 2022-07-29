@@ -183,12 +183,13 @@ CREATE TABLE public.users (
     remember_created_at timestamp(6) without time zone,
     current_sign_in_at timestamp(6) without time zone,
     last_sign_in_at timestamp(6) without time zone,
-    created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL,
     first_name character varying DEFAULT 'Anonym'::character varying NOT NULL,
     last_name character varying,
     birthdate date,
-    about text
+    about text,
+    address_id bigint,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
 );
 
 
@@ -331,6 +332,13 @@ CREATE UNIQUE INDEX index_active_storage_variant_records_uniqueness ON public.ac
 
 
 --
+-- Name: index_users_on_address_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_users_on_address_id ON public.users USING btree (address_id);
+
+
+--
 -- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -367,11 +375,8 @@ ALTER TABLE ONLY public.active_storage_attachments
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
-('0'),
-('20220708151525'),
-('20220708151644'),
-('20220708151956'),
-('20220708160318'),
-('20220729085409');
+('20220729093918'),
+('20220729094352'),
+('20220729095335');
 
 

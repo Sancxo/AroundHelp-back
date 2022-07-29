@@ -7,7 +7,7 @@ class CreateAddresses < ActiveRecord::Migration[7.0]
       t.string :state
       t.string :postal_code
       t.string :country
-      t.decimal :lat_long
+      t.decimal :lat_long, array: true, default: []
 
       t.timestamps
     end
